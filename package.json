@@ -1,0 +1,32 @@
+{
+  "name": "metalsmith-related-posts",
+  "version": "1.0.0",
+  "description": "A Metalsmith plugin that adds a list of related posts to each post based on the specified property (e.g. tags, categories, etc).",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "metalsmith": "^2.3.0",
+    "mocha": "^3.3.0",
+    "should": "^11.2.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlansCodeLog/metalsmith-related-posts.git"
+  },
+  "keywords": [
+    "metalsmith",
+    "plugin"
+  ],
+  "author": "Alan North",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlansCodeLog/metalsmith-related-posts/issues"
+  },
+  "homepage": "https://github.com/AlansCodeLog/metalsmith-related-posts#readme"
+}
