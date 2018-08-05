@@ -15,7 +15,7 @@ function plugin(opts){
                 var related = Object.keys(files2).map(file2=> {
                     var count = 0;
                     var post2 = files2[file2]
-                    if (post !== post2) {
+                    if (post !== post2 && !post.private) {
                         for (tag of post[tags]) {
                             if (typeof post2[tags] !== "undefined" && !opts.exclude.includes(tag) && post2[tags].includes(tag)) {
                                 count++
@@ -24,7 +24,7 @@ function plugin(opts){
                     }
                     return {file:file2, count:count}
                 }).filter(match => {
-                    return !files[match.file].private && files[match.file] !== post && match.count !== 0 && match.count >= opts.min_matches})
+                    return files[match.file] !== post && match.count !== 0 && match.count >= opts.min_matches})
                 .sort((a,b)=> {
                     return a.count - b.count
                 })
