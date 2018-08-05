@@ -15,7 +15,7 @@ function plugin(opts){
                 var related = Object.keys(files2).map(file2=> {
                     var count = 0;
                     var post2 = files2[file2]
-                    if (post !== post2 && !post.private) {
+                    if (post !== post2 && !post2.private) {
                         for (tag of post[tags]) {
                             if (typeof post2[tags] !== "undefined" && !opts.exclude.includes(tag) && post2[tags].includes(tag)) {
                                 count++
